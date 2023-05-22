@@ -6,9 +6,33 @@ const Date = () => {
     <>
       {/* input section starts */}
       <div className="flex justify-evenly">
-        <DateInput key={10} min="1" max="31" heading="DAY" pHolder={"DD"} />
-        <DateInput key={11} min="1" max="12" heading="MONTH" pHolder={"MM"} />
-        <DateInput key={12} min="1950" max="" heading="YEAR" pHolder={"YYYY"} />
+        <DateInput
+          key={10}
+          min="1"
+          max="31"
+          minLen="1"
+          maxLen="2"
+          heading="DAY"
+          pHolder={"DD"}
+        />
+        <DateInput
+          key={11}
+          min="1"
+          max="12"
+          minLen="1"
+          maxLen="2"
+          heading="MONTH"
+          pHolder={"MM"}
+        />
+        <DateInput
+          key={12}
+          min="1950"
+          max="2050"
+          minLen="4"
+          maxLen="4"
+          heading="YEAR"
+          pHolder={"YYYY"}
+        />
       </div>
       {/* input section ends */}
       <div className="my-8 relative">
@@ -18,14 +42,14 @@ const Date = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={1.5}
             stroke="currentColor"
             className="w-full h-full"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
             />
           </svg>
         </button>

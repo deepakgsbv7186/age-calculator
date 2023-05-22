@@ -1,6 +1,6 @@
 import React from "react";
 
-const DateInput = ({ min, max, heading, pHolder }) => {
+const DateInput = ({ min, max, heading, pHolder, minLen, maxLen }) => {
   function handleChange(e) {
     console.log(e.target.value);
   }
@@ -11,6 +11,8 @@ const DateInput = ({ min, max, heading, pHolder }) => {
         <input
           onChange={handleChange}
           type="number"
+          minLength={minLen}
+          maxLength={maxLen}
           min={min}
           max={max}
           placeholder={pHolder}
